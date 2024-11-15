@@ -1,205 +1,115 @@
 <!DOCTYPE html>
-<html>
-    <!--Head-->
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width" />
-        <title>Jake W Sanford</title>
-        <link rel="stylesheet" type="text/css" href="portfolio.css">
-        <meta name="description" content="Portfolio website of Jake Sanford, showcasing coding skills and projects.">
-        <meta name="keywords" content="Jake Sanford, portfolio, software developer, coding projects">
-        <form action="https://formspree.io/f/YOUR_ENDPOINT" method="POST">
-
-    </head>
-
-    <div class="Row" id="GitHub">
-        <!-- Left column -->
-        <div class="Column_1">
-            <h1>GitHub</h1>
-            <p>
-                You can view my coding projects on my GitHub profile here:
-                <br>
-                <ul>
-                    <li><a href="https://github.com/YOUR_USERNAME/REPO_1" target="_blank">Project 1</a></li>
-                    <li><a href="https://github.com/YOUR_USERNAME/REPO_2" target="_blank">Project 2</a></li>
-                    <li><a href="https://github.com/YOUR_USERNAME/REPO_3" target="_blank">Project 3</a></li>
-                </ul>
-            </p>
-        </div>
-        <!-- Right column -->
-        <div class="Column_2">
-            <a href="https://github.com/YOUR_USERNAME" target="_blank"><img src="images/GitHub.png" alt="GitHub Logo"></a>
-        </div>
-    </div>
-    
-
-    <!--Body-->
-    <body class="Background">
-        
-        <!--Navbar-->
-        <div class="Navbar">
-            <a class="active" href="#Home">Home</a>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio website of Jake W Sanford, showcasing coding skills and projects.">
+    <meta name="keywords" content="Jake Sanford, portfolio, software developer, coding projects">
+    <title>Jake W Sanford</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="portfolio.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <header>
+        <nav class="Navbar">
+            <a href="#Home" class="active">Home</a>
             <a href="#About">About</a>
             <a href="#GitHub">GitHub</a>
+            <a href="#Projects">Projects</a>
             <a href="#Contact">Contact</a>
-            <a href="projects.html">Projects</a> <!-- New link -->
-        </div>
-        
+        </nav>
+    </header>
 
-        <!--Breaks inserted to add space between navbar and the first heading-->
-        <br>
-        <br>
-
-        <!--Background video-->
-        <div id="Home">
-            <video autoplay muted loop id="Insert Video Here">
-                <source src="images/video/Typing.mp4" type="video/mp4">
-                <!--Display message if video fails to run-->
-                Your browser does not support HTML5 video.
-            </video>
-        </div>
-
-        <!--Video text-->
+    <!-- Hero Section -->
+    <section id="Home">
+        <video autoplay muted loop class="BackgroundVideo">
+            <source src="images/video/Typing.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
         <div class="Video_Text">
-            <h1 class="white-text">Jake W Sanford</h1>
-            <strong>
-                <p class="center">
-                    <q>The computer programmer is a creator of universes for which he alone is the lawgiver.
-                        <br>No playwright, no stage director, no emperor, however powerful, has ever exercised such absolute authority to arrange a stage or
-                        <br>field of battle and to command such unswervingly dutiful actors or troops.
-                    </q>
-                    <br> -Joseph Weizenbaum
-                    <br>
-                    <br> My name is Jake Sanford. Welcome to my portfolio website. On it, I will tell you about my background and experience.
-                    <br>
-                    <br> Thank you for stopping by and enjoy! 
-                </p>
-            </strong>
+            <h1>Jake W Sanford</h1>
+            <p>Welcome to my portfolio! I’m a passionate software developer with expertise in full-stack development.</p>
         </div>
+    </section>
 
-        <!--About section-->
-        <div class="Row" id="About">
-            <!--Left column-->
+    <!-- About Section -->
+    <section id="About">
+        <div class="Row">
+            <div class="Image_Container">
+                <img src="family.jpg" alt="Jake Sanford's Family">
+            </div>
+            
             <div class="Column_2">
-                <img src="Family.jpg" alt="Family">
-            </div>
-            <!--Right column-->
-            <div class="Column_1">
-                <h1>About</h1>
+                <h2>About Me</h2>
                 <p>
-                    I am a software developer who loves to code! As a father of three with one on the way, I enjoy time with my family and traveling. 
-                    <br>
-                    <br>I am a graduate of <a href="https://www.learncodinganywhere.com" target="_blank">The Tech Academy</a>’s Software Developer Boot Camp, and trained and experienced in the following web and programming languages: HTML, CSS, JavaScript, SQL, C# and more. 
-                    <br>
-                    <br>I am a full-stack developer and would love to work with you on your project. <a href="#Contact">Contact</a> me below!
+                    I am a software developer who loves to code! As a father of three with one on the way, I enjoy 
+                    time with my family and traveling. I graduated from 
+                    <a href="https://www.learncodinganywhere.com" target="_blank">The Tech Academy</a>’s Software Developer Boot Camp 
+                    and have expertise in HTML, CSS, JavaScript, SQL, C#, and more.
                 </p>
             </div>
         </div>
+    </section>
 
-        <!--GitHub section-->
-        <div class="Row" id="GitHub">
-            <!--Left column-->
-            <div class="Column_1">
-                <h1>GitHub</h1>
-                <p>
-                    You can view my coding projects on my GitHub profile here:
-                    <br>
-                    <p class="center"><a href="https://github.com/the-tech-academy" target="_blank">The Tech Academy Github</a></p>
-                </p>
+    <!-- GitHub Section -->
+    <section id="GitHub">
+        <h2>GitHub</h2>
+        <p>Check out my coding projects on GitHub:</p>
+        <ul>
+            <li><a href="https://github.com/sanfjake/repo1" target="_blank">Project 1</a></li>
+            <li><a href="https://github.com/sanfjake/repo2" target="_blank">Project 2</a></li>
+            <li><a href="https://github.com/sanfjake/repo3" target="_blank">Project 3</a></li>
+        </ul>
+        <p>
+            <a href="https://github.com/sanfjake" target="_blank" class="GitHub_Link">
+                Visit My GitHub Profile
+            </a>
+        </p>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="Projects">
+        <h2>Projects</h2>
+        <div class="Projects">
+            <div class="Project_Item">
+                <h3>Portfolio Website</h3>
+                <p>A responsive website showcasing my coding skills and projects.</p>
             </div>
-            <!--Right column-->
-            <div class="Column_2">
-                <a href="https://github.com/the-tech-academy" target="_blank"><img src="images/GitHub.png" alt="GitHub Logo"></a>
+            <div class="Project_Item">
+                <h3>Gym Membership App</h3>
+                <p>A Flutter-based app for managing gym memberships and payments.</p>
             </div>
         </div>
+    </section>
 
-        <!--Contact section-->
-        <div class="Row" id="Contact">
-            <!--Contact image, left column-->
-            <div class="Column_2 Column_tall">
-                <img src="images/html_custom.png" alt="Contact_Image">
-            </div>
-            <!--Contact form, right column-->
-            <form action="https://formspree.io/f/mqakbvzw" method="POST">
-                <label for="Name">Name:</label>
-                <input type="text" id="Name" name="name" placeholder="Please enter your name here" required>
-            
-                <label for="Email">Email:</label>
-                <input type="email" id="Email" name="email" placeholder="Please enter your email here" required>
-            
-                <label for="Message">Message:</label>
-                <textarea id="Message" name="message" placeholder="Please write your message here" required></textarea>
-            
-                <input type="submit" value="SUBMIT">
-            </form>
-            <div class="Row" id="Contact">
-                <div class="Column_2 Column_tall">
-                    <img src="images/html_custom.png" alt="Contact_Image">
-                </div>
-                <div class="Column_1 Column_tall">
-                    <h1>Contact</h1>
-                    <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-                        <label for="Name">Name:</label>
-                        <input type="text" id="Name" name="name" placeholder="Please enter your name here" required>
-            
-                        <label for="Email">Email:</label>
-                        <input type="email" id="Email" name="email" placeholder="Please enter your email here" required>
-            
-                        <label for="Message">Message:</label>
-                        <textarea id="Message" name="message" placeholder="Please write your message here" required></textarea>
-            
-                        <input type="submit" value="SUBMIT">
-                    </form>
-            
-                    <!-- Placeholder for success or error messages -->
-                    <p id="form-message" class="hidden"></p>
-                </div>
-            </div>
-            
+    <!-- Contact Section -->
+    <section id="Contact">
+        <h2>Contact Me</h2>
+        <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name" required>
 
-        <!--Footer section-->
-        <footer>
-            <p>
-                <p class="center">&copy Prosper Consulting Inc., <a href="https://www.learncodinganywhere.com/" target="_blank">The Tech Academy</a></p>
-                <br>
-            </p>
-        </footer>
-        <!--JavaScript for Forms-->
-        <script>
-            const form = document.querySelector('form'); // Select the form
-            const message = document.getElementById('form-message'); // Select the message placeholder
-        
-            form.addEventListener('submit', async (e) => {
-                e.preventDefault(); // Prevent the default form submission
-                const formData = new FormData(form); // Gather form data
-        
-                try {
-                    const response = await fetch(form.action, {
-                        method: form.method,
-                        body: formData,
-                        headers: {
-                            'Accept': 'application/json'
-                        }
-                    });
-        
-                    if (response.ok) {
-                        message.textContent = 'Thank you for your message! I will get back to you soon.';
-                        message.className = 'success'; // Add success styling
-                        message.classList.remove('hidden'); // Make message visible
-                        form.reset(); // Clear form inputs
-                    } else {
-                        message.textContent = 'Oops! Something went wrong. Please try again later.';
-                        message.className = 'error'; // Add error styling
-                        message.classList.remove('hidden'); // Make message visible
-                    }
-                } catch (error) {
-                    message.textContent = 'There was a problem submitting the form. Check your connection and try again.';
-                    message.className = 'error'; // Add error styling
-                    message.classList.remove('hidden'); // Make message visible
-                }
-            });
-        </script>
-        <!--End Javascript for Forms-->
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
 
-    </body>
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" placeholder="Write your message" required></textarea>
+
+            <input type="submit" value="Send Message">
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Jake W Sanford. All rights reserved.</p>
+        <p>
+            <a href="jake.w.sanford@gmail.com">Email</a> | 
+            <a href="https://github.com/sanfjake" target="_blank" class="GitHub_Link">
+                GitHub
+            </a> | 
+            <a href="#Contact">Contact</a>
+        </p>
+    </footer>
+</body>
 </html>
