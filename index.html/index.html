@@ -6,7 +6,32 @@
         <meta name="viewport" content="width=device-width" />
         <title>Jake W Sanford</title>
         <link rel="stylesheet" type="text/css" href="portfolio.css">
+        <meta name="description" content="Portfolio website of Jake Sanford, showcasing coding skills and projects.">
+        <meta name="keywords" content="Jake Sanford, portfolio, software developer, coding projects">
+        <form action="https://formspree.io/f/YOUR_ENDPOINT" method="POST">
+
     </head>
+
+    <div class="Row" id="GitHub">
+        <!-- Left column -->
+        <div class="Column_1">
+            <h1>GitHub</h1>
+            <p>
+                You can view my coding projects on my GitHub profile here:
+                <br>
+                <ul>
+                    <li><a href="https://github.com/YOUR_USERNAME/REPO_1" target="_blank">Project 1</a></li>
+                    <li><a href="https://github.com/YOUR_USERNAME/REPO_2" target="_blank">Project 2</a></li>
+                    <li><a href="https://github.com/YOUR_USERNAME/REPO_3" target="_blank">Project 3</a></li>
+                </ul>
+            </p>
+        </div>
+        <!-- Right column -->
+        <div class="Column_2">
+            <a href="https://github.com/YOUR_USERNAME" target="_blank"><img src="images/GitHub.png" alt="GitHub Logo"></a>
+        </div>
+    </div>
+    
 
     <!--Body-->
     <body class="Background">
@@ -93,20 +118,42 @@
                 <img src="images/html_custom.png" alt="Contact_Image">
             </div>
             <!--Contact form, right column-->
-            <div class="Column_1 Column_tall">
-                <h1>Contact</h1>
-                <!--This specifies where and how to send the form data; we are leaving it blank-->
-                <form action="" method="POST"> <!-- Here we are utilizing a 3rd party service to submit the contact form data, insert your formspree endpoint in the action attribute -->
-                    <label>Name:</label>
-                        <input type="text" placeholder="Please enter your name here">
-                    <label>Email:</label>
-                        <input type="text" id="Email" name="Email" placeholder="Please enter your email here">
-                    <label>Message:</label>
-                        <input type="text" id="Message" name="Message" placeholder="Please write your message here">
+            <form action="https://formspree.io/f/mqakbvzw" method="POST">
+                <label for="Name">Name:</label>
+                <input type="text" id="Name" name="name" placeholder="Please enter your name here" required>
+            
+                <label for="Email">Email:</label>
+                <input type="email" id="Email" name="email" placeholder="Please enter your email here" required>
+            
+                <label for="Message">Message:</label>
+                <textarea id="Message" name="message" placeholder="Please write your message here" required></textarea>
+            
+                <input type="submit" value="SUBMIT">
+            </form>
+            <div class="Row" id="Contact">
+                <div class="Column_2 Column_tall">
+                    <img src="images/html_custom.png" alt="Contact_Image">
+                </div>
+                <div class="Column_1 Column_tall">
+                    <h1>Contact</h1>
+                    <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+                        <label for="Name">Name:</label>
+                        <input type="text" id="Name" name="name" placeholder="Please enter your name here" required>
+            
+                        <label for="Email">Email:</label>
+                        <input type="email" id="Email" name="email" placeholder="Please enter your email here" required>
+            
+                        <label for="Message">Message:</label>
+                        <textarea id="Message" name="message" placeholder="Please write your message here" required></textarea>
+            
                         <input type="submit" value="SUBMIT">
-                </form>
+                    </form>
+            
+                    <!-- Placeholder for success or error messages -->
+                    <p id="form-message" class="hidden"></p>
+                </div>
             </div>
-        </div>
+            
 
         <!--Footer section-->
         <footer>
@@ -115,5 +162,42 @@
                 <br>
             </p>
         </footer>
+        <!--JavaScript for Forms-->
+        <script>
+            const form = document.querySelector('form'); // Select the form
+            const message = document.getElementById('form-message'); // Select the message placeholder
+        
+            form.addEventListener('submit', async (e) => {
+                e.preventDefault(); // Prevent the default form submission
+                const formData = new FormData(form); // Gather form data
+        
+                try {
+                    const response = await fetch(form.action, {
+                        method: form.method,
+                        body: formData,
+                        headers: {
+                            'Accept': 'application/json'
+                        }
+                    });
+        
+                    if (response.ok) {
+                        message.textContent = 'Thank you for your message! I will get back to you soon.';
+                        message.className = 'success'; // Add success styling
+                        message.classList.remove('hidden'); // Make message visible
+                        form.reset(); // Clear form inputs
+                    } else {
+                        message.textContent = 'Oops! Something went wrong. Please try again later.';
+                        message.className = 'error'; // Add error styling
+                        message.classList.remove('hidden'); // Make message visible
+                    }
+                } catch (error) {
+                    message.textContent = 'There was a problem submitting the form. Check your connection and try again.';
+                    message.className = 'error'; // Add error styling
+                    message.classList.remove('hidden'); // Make message visible
+                }
+            });
+        </script>
+        <!--End Javascript for Forms-->
+        
     </body>
 </html>

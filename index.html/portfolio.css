@@ -154,6 +154,13 @@ footer {
 .Navbar a.active { /* This targets the a element on the navbar with the "active" class */
     background-color: darkgray;
 }
+
+.Navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
 /***** END OF NAVBAR STYLING *****/
 
 /***** VIDEO STYLING *****/
@@ -188,6 +195,12 @@ footer {
 @keyframes moveVideoText {
     from {top: -100vw;} /* This sets the position of the video text to above the viewport */
     to {top: 0vw;} /* This moves the video text to the normal positioning on the viewport */
+}
+
+video {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
 }
 /***** END OF VIDEO STYLING *****/
 
@@ -284,4 +297,46 @@ form {
     padding: 10px; /* Adds padding to the contact form */
     font-family: "Trebuchet MS", Optima;
 }
+/* Error Message */
+input[type="submit"] {
+    background-color: #4CAF50; /* Green */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+#form-message {
+    margin-top: 10px;
+    font-size: 16px;
+    padding: 10px;
+    border-radius: 5px;
+}
+#form-message.success {
+    color: green;
+    background-color: #e6ffe6;
+    border: 1px solid green;
+}
+#form-message.error {
+    color: red;
+    background-color: #ffe6e6;
+    border: 1px solid red;
+}
+.hidden {
+    display: none;
+}
+
 /***** END OF CONTACT FORM STYLING *****/
+
+/* Makes website conform to various screen sizes */
+@media (max-width: 768px) {
+    .Column_1, .Column_2 {
+        width: 100%;
+        margin: 0 auto;
+    }
+}
+
+/*  */
