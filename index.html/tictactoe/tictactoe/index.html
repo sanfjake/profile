@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Tic Tac Toe game supporting 2-player and player vs computer modes with multiple difficulty levels.">
+    <title>Tic Tac Toe</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Tic Tac Toe</h1>
+
+        <!-- Game Mode Selection -->
+        <div>
+            <label for="game-mode">Game Mode:</label>
+            <select id="game-mode" aria-label="Select Game Mode">
+                <option value="2v2">2-Player Mode</option>
+                <option value="vsComputer" selected>Player vs Computer</option>
+            </select>
+        </div>
+
+        <!-- Difficulty Selection (only visible in Player vs Computer mode) -->
+        <div id="difficulty-container">
+            <label for="difficulty">Difficulty:</label>
+            <select id="difficulty" aria-label="Select Difficulty Level">
+                <option value="Easy">Easy</option>
+                <option value="Medium" selected>Medium</option>
+                <option value="Hard">Hard</option>
+            </select>
+        </div>
+
+        <!-- Color Selection -->
+        <div id="color-options">
+            <label for="x-color">X Color:</label>
+            <input type="color" id="x-color" value="#FF5733" aria-label="Choose X Color"> <!-- Default orange for X -->
+
+            <label for="o-color">O Color:</label>
+            <input type="color" id="o-color" value="#33C3FF" aria-label="Choose O Color"> <!-- Default blue for O -->
+        </div>
+
+        <!-- Game Board -->
+        <div id="game-board" role="grid">
+            <div class="cell" data-index="0" role="gridcell" aria-label="Cell 1"></div>
+            <div class="cell" data-index="1" role="gridcell" aria-label="Cell 2"></div>
+            <div class="cell" data-index="2" role="gridcell" aria-label="Cell 3"></div>
+            <div class="cell" data-index="3" role="gridcell" aria-label="Cell 4"></div>
+            <div class="cell" data-index="4" role="gridcell" aria-label="Cell 5"></div>
+            <div class="cell" data-index="5" role="gridcell" aria-label="Cell 6"></div>
+            <div class="cell" data-index="6" role="gridcell" aria-label="Cell 7"></div>
+            <div class="cell" data-index="7" role="gridcell" aria-label="Cell 8"></div>
+            <div class="cell" data-index="8" role="gridcell" aria-label="Cell 9"></div>
+        </div>
+
+        <!-- Game Status -->
+        <div id="status-message" aria-live="polite">Player X's turn</div>
+
+        <!-- Reset Button -->
+        <button id="reset-button" aria-label="Reset the Game">Reset Game</button>
+    </div>
+
+    <script src="tictactoe.js"></script>
+</body>
+</html>

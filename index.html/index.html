@@ -39,7 +39,6 @@
             <div class="Image_Container">
                 <img src="family.jpg" alt="Jake Sanford's Family">
             </div>
-            
             <div class="Column_2">
                 <h2>About Me</h2>
                 <p>
@@ -55,16 +54,11 @@
     <!-- GitHub Section -->
     <section id="GitHub">
         <h2>GitHub</h2>
-        <p>Check out my coding projects on GitHub:</p>
-        <ul>
-            <li><a href="https://github.com/sanfjake/repo1" target="_blank">Project 1</a></li>
-            <li><a href="https://github.com/sanfjake/repo2" target="_blank">Project 2</a></li>
-            <li><a href="https://github.com/sanfjake/repo3" target="_blank">Project 3</a></li>
-        </ul>
         <p>
-            <a href="https://github.com/sanfjake" target="_blank" class="GitHub_Link">
-                Visit My GitHub Profile
-            </a>
+            Explore more of my work and coding projects on my 
+            <a href="https://github.com/sanfjake" target="_blank" class="GitHub_Link" aria-label="Visit Jake Sanford's GitHub Profile">
+                GitHub Profile
+            </a>.
         </p>
     </section>
 
@@ -72,13 +66,22 @@
     <section id="Projects">
         <h2>Projects</h2>
         <div class="Projects">
+            <!-- Portfolio Website Project -->
             <div class="Project_Item">
                 <h3>Portfolio Website</h3>
                 <p>A responsive website showcasing my coding skills and projects.</p>
             </div>
+    
+            <!-- Tic Tac Toe Game Project -->
             <div class="Project_Item">
-                <h3>Gym Membership App</h3>
-                <p>A Flutter-based app for managing gym memberships and payments.</p>
+                <h3>Tic Tac Toe Game</h3>
+                <p>
+                    A fun and interactive Tic Tac Toe game with a sleek design and options for 2-player or vs. computer modes, 
+                    featuring three difficulty levels. Play it now!
+                </p>
+                <a href="tictactoe/tictactoe/index.html" target="_blank" class="project-link" aria-label="Play Tic Tac Toe Game">
+                    Play Game
+                </a>
             </div>
         </div>
     </section>
@@ -86,7 +89,7 @@
     <!-- Contact Section -->
     <section id="Contact">
         <h2>Contact Me</h2>
-        <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+        <form id="contact-form" action="https://formspree.io/f/mqakbvzw" method="POST">
             <label for="name">Name:</label>
             <input type="text" id="name" name="name" placeholder="Enter your name" required>
 
@@ -96,7 +99,7 @@
             <label for="message">Message:</label>
             <textarea id="message" name="message" placeholder="Write your message" required></textarea>
 
-            <input type="submit" value="Send Message">
+            <button type="submit">Send Message</button>
         </form>
     </section>
 
@@ -104,12 +107,15 @@
     <footer>
         <p>&copy; 2024 Jake W Sanford. All rights reserved.</p>
         <p>
-            <a href="jake.w.sanford@gmail.com">Email</a> | 
+            <a href="mailto:jake.w.sanford@gmail.com">Email</a> | 
             <a href="https://github.com/sanfjake" target="_blank" class="GitHub_Link">
                 GitHub
             </a> | 
             <a href="#Contact">Contact</a>
         </p>
     </footer>
+
+    <!-- JavaScript -->
+    <script src="portfolio.js"></script>
 </body>
 </html>

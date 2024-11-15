@@ -1,0 +1,139 @@
+/* General Body Styling */
+body {
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    background-color: #000; /* Black background */
+    color: #fff; /* White text */
+    margin: 0;
+    padding: 20px;
+}
+
+/* Headings */
+h1 {
+    font-size: 2.5rem;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: #fff; /* White text */
+}
+
+/* Game Board */
+#game-board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 5px; /* Space between cells */
+    margin: 20px auto;
+    padding: 5px; /* Padding inside the border */
+    border: 5px solid #fff; /* White border around the grid */
+    border-radius: 15px; /* Rounded corners for the border */
+    width: max-content; /* Ensures the border fits snugly around the grid */
+    box-shadow: 0 8px 15px rgba(255, 255, 255, 0.3); /* Glow effect around the border */
+}
+
+
+/* Cell Styling */
+.cell {
+    width: 100px;
+    height: 100px;
+    background-color: #222; /* Dark gray */
+    border: 2px solid #fff; /* White border between cells */
+    border-radius: 10px; /* Rounded edges for each cell */
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.6); /* Subtle inset shadow for depth */
+    font-size: 2.5rem;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace; /* Retro-style font */
+    color: #fff; /* White text */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+/* Hover Effects */
+.cell:hover {
+    transform: translateY(-5px) scale(1.1); /* 3D hover effect */
+    background-color: #444; /* Slightly lighter on hover */
+    box-shadow: 0 8px 12px rgba(255, 255, 255, 0.5); /* Brighter glow on hover */
+}
+
+/* Taken Cell */
+.cell.taken {
+    cursor: not-allowed;
+    background-color: #333; /* Slightly darker for taken cells */
+}
+
+/* Active Cell Click Effect */
+.cell:active {
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.7); /* Bright glow effect on click */
+}
+
+/* Status Message */
+#status-message {
+    font-size: 1.2rem;
+    margin-top: 10px;
+    color: #fff; /* White text for status */
+}
+
+/* Reset Button */
+#reset-button {
+    padding: 15px 30px; /* Larger padding for a bigger button */
+    font-size: 1.2rem; /* Larger font size for better readability */
+    color: #000; /* Black text for contrast */
+    background-color: #fff; /* Clean white background */
+    border: none; /* Remove default border */
+    border-radius: 25px; /* Rounded edges */
+    cursor: pointer; /* Pointer cursor for interactivity */
+    margin-top: 20px;
+    transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+}
+
+#reset-button:hover {
+    background-color: #f0f0f0; /* Light gray hover background */
+    color: #333; /* Slightly darker text on hover */
+    transform: scale(1.1); /* Slight zoom effect */
+}
+
+#reset-button:active {
+    background-color: #e0e0e0; /* Slightly darker gray for active state */
+    transform: scale(1.05); /* Reduce the zoom effect slightly */
+}
+
+/* Dropdown Styling */
+#game-mode, #difficulty {
+    padding: 12px 20px; /* Slightly larger padding */
+    font-size: 1.1rem; /* Consistent font size with the button */
+    border-radius: 20px; /* Rounded edges */
+    border: 1px solid #ccc; /* Light gray border */
+    background-color: #fff; /* White background */
+    color: #000; /* Black text */
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#game-mode:hover, #difficulty:hover {
+    background-color: #f0f0f0; /* Light gray on hover */
+    transform: scale(1.05); /* Slight zoom effect */
+}
+
+#difficulty-container.hidden {
+    display: none; /* Hide difficulty dropdown */
+}
+
+/* Dropdown and Color Picker Container */
+#color-options, #difficulty-container {
+    margin-bottom: 20px;
+}
+
+label {
+    font-size: 1rem;
+    margin-right: 10px;
+    color: #fff; /* White text for labels */
+}
+
+input[type="color"] {
+    margin: 0 10px;
+    border: none;
+    cursor: pointer;
+    background-color: #fff; /* White background for color picker */
+}
