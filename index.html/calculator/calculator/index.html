@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Calculator with numbers on the left and operations on the right.">
+    <title>Calculator</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="calculator">
+        <div class="calculator-display" id="display">0</div>
+        <div class="calculator-buttons">
+            <!-- First Row -->
+            <button class="btn clear" id="clear">C</button>
+            <button class="btn" id="delete">⌫</button>
+            <button class="btn" id="placeholder" disabled></button>
+            <button class="btn operator" data-operator="/">÷</button>
+            <!-- Second Row -->
+            <button class="btn" data-number="7">7</button>
+            <button class="btn" data-number="8">8</button>
+            <button class="btn" data-number="9">9</button>
+            <button class="btn operator" data-operator="*">×</button>
+            <!-- Third Row -->
+            <button class="btn" data-number="4">4</button>
+            <button class="btn" data-number="5">5</button>
+            <button class="btn" data-number="6">6</button>
+            <button class="btn operator" data-operator="-">−</button>
+            <!-- Fourth Row -->
+            <button class="btn" data-number="1">1</button>
+            <button class="btn" data-number="2">2</button>
+            <button class="btn" data-number="3">3</button>
+            <button class="btn operator" data-operator="+">+</button>
+            <!-- Fifth Row -->
+            <button class="btn" data-number="0" style="grid-column: span 2;">0</button>
+            <button class="btn" id="decimal">.</button>
+            <button class="btn equals" id="equals">=</button>
+        </div>
+    </div>
+    <script src="java.js"></script>
+</body>
+</html>

@@ -1,10 +1,10 @@
 /***** General Styling *****/
 body {
     margin: 0;
-    font-family: "Trebuchet MS", sans-serif; /* Consistent font */
+    font-family: "Trebuchet MS", sans-serif;
     line-height: 1.6;
-    background-color: #f5f5f5; /* Light background */
-    color: #333; /* Text color */
+    background-color: #f5f5f5;
+    color: #333;
     text-align: center;
 }
 
@@ -19,14 +19,14 @@ h1 {
 
 h1:hover {
     filter: brightness(90%);
-    transform: scale(1.05); /* Slight zoom effect */
+    transform: scale(1.05);
 }
 
 /* Paragraphs */
 p {
     font-family: "Courier New", Courier, monospace;
     text-align: justify;
-    font-size: 16px;
+    font-size: 1rem;
     padding: 0 20px;
     color: #555;
     letter-spacing: 1px;
@@ -34,7 +34,7 @@ p {
 }
 
 p:hover {
-    transform: scale(1.02); /* Subtle hover effect */
+    transform: scale(1.02);
 }
 
 /* Links */
@@ -45,7 +45,7 @@ a {
 }
 
 a:hover {
-    color: #0056b3; /* Darker blue */
+    color: #0056b3;
     text-decoration: underline;
 }
 
@@ -60,26 +60,25 @@ img {
 }
 
 img:hover {
-    transform: scale(1.05); /* Slight zoom */
+    transform: scale(1.05);
 }
 
 /***** Image Hover Effect *****/
 .Image_Container {
-    position: relative; /* Isolates the hover effect within this container */
-    overflow: hidden; /* Prevents image from spilling outside the container */
-    display: inline-block; /* Keeps image inline while respecting its container */
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
     text-align: center;
     margin: 20px auto;
 }
 
 .Image_Container img {
-    z-index: 1; /* Keeps the image below other elements by default */
-    position: relative; /* Allows precise control within the container */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .Image_Container:hover img {
-    transform: scale(1.05); /* Slight zoom effect */
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Adds shadow for depth */
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
 /***** Navbar *****/
@@ -103,26 +102,7 @@ img:hover {
 }
 
 .Navbar a:hover {
-    background-color: #444; /* Darker background on hover */
-}
-
-/***** Responsive Design *****/
-@media (max-width: 768px) {
-    .Navbar {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    img {
-        height: 200px;
-    }
-}
-
-@media (max-width: 576px) {
-    .Navbar a {
-        font-size: 14px;
-        padding: 8px 10px;
-    }
+    background-color: #444;
 }
 
 /***** Forms *****/
@@ -130,7 +110,7 @@ form {
     background-color: #fff;
     padding: 20px;
     border-radius: 5px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 input[type="text"], input[type="email"], textarea {
@@ -141,11 +121,6 @@ input[type="text"], input[type="email"], textarea {
     border-radius: 5px;
     font-family: "Courier New", monospace;
     transition: box-shadow 0.3s ease, border-color 0.3s ease;
-}
-
-input[type="text"]:hover, input[type="email"]:hover, textarea:hover {
-    border-color: #0366d6;
-    box-shadow: 0 0 5px #0366d6 inset;
 }
 
 input[type="submit"] {
@@ -163,33 +138,6 @@ input[type="submit"]:hover {
     background-color: #45a049;
     transform: scale(1.05);
 }
-#form-status {
-    margin-top: 10px;
-    padding: 10px;
-    font-size: 1rem;
-    border-radius: 5px;
-}
-
-#form-status.success {
-    color: #155724;
-    background-color: #d4edda;
-    border: 1px solid #c3e6cb;
-}
-
-#form-status.error {
-    color: #721c24;
-    background-color: #f8d7da;
-    border: 1px solid #f5c6cb;
-}
-
-
-/***** Footer *****/
-footer {
-    background-color: #333;
-    color: #fff;
-    padding: 10px 0;
-    text-align: center;
-}
 
 /***** Projects Section *****/
 .Projects {
@@ -201,32 +149,45 @@ footer {
 }
 
 .Project_Item {
-    background-color: #222; /* Dark gray */
-    color: #fff; /* White text */
+    background-color: #222;
+    color: #fff;
+    text-align: center;
     padding: 20px;
-    border-radius: 10px; /* Rounded edges */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .Project_Item:hover {
-    transform: translateY(-5px); /* Lift effect */
-    box-shadow: 0 6px 12px rgba(255, 255, 255, 0.3); /* Bright glow */
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(255, 255, 255, 0.3);
 }
 
 .project-link {
     display: inline-block;
     margin-top: 10px;
     padding: 10px 15px;
-    background-color: #0078D4; /* Blue button */
+    background-color: #0078D4;
     color: #fff;
     text-decoration: none;
     font-size: 1rem;
-    border-radius: 5px; /* Rounded edges */
+    border-radius: 5px;
     transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .project-link:hover {
-    background-color: #0056a3; /* Darker blue on hover */
-    transform: scale(1.05); /* Slight zoom */
+    background-color: #0056a3;
+    transform: scale(1.05);
+}
+
+/***** Responsive Design *****/
+@media (max-width: 576px) {
+    .Project_Item {
+        padding: 15px;
+    }
+
+    .project-link {
+        font-size: 0.9rem;
+        padding: 8px 10px;
+    }
 }
