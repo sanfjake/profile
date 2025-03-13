@@ -25,7 +25,7 @@ h1:hover {
 /* Paragraphs */
 p {
     font-family: "Courier New", Courier, monospace;
-    text-align: justify;
+    text-align:  center;
     font-size: 1rem;
     padding: 0 20px;
     color: #555;
